@@ -1,0 +1,13 @@
+limit-config:
+     list:
+         -
+           name: t1
+           size: 10000
+           speed: 10
+         -
+            name: t2
+            size: 1000
+            speed: 5
+
+
+
