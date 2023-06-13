@@ -1,9 +1,12 @@
 # springboot_starter_limit
 A Spring Boot starter that limits speed.  
+一个用于限制速度的实现，可以实现对不同的队列进行限制速度，用ratelimiter实现.
+
+
 
 配置  
 
-sprigboot: application.yml  
+springboot: application.yml  
 
 limit-config:  
 
