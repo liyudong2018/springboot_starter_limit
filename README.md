@@ -32,7 +32,8 @@ limit-config:
      
   </dependency>  
  使用方式:  
-  1.要放入对象实现BaseData，空接口   
+  1.要放入对象实现BaseData，空接口    
+  
   2.
  
      @Autowired    
