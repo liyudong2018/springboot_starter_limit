@@ -1,5 +1,5 @@
 # springboot_starter_limit
-A Spring Boot starter that limits speed.
+A Spring Boot starter that limits speed.\n
 配置 
 sprigboot: application.yml
 limit-config:
