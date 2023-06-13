@@ -1,6 +1,14 @@
 # springboot_starter_limit
 A Spring Boot starter that limits speed.  
-一个用于限制速度的实现，可以实现对不同的队列进行限制速度，用ratelimiter实现.
+一个用于限制速度的实现，可以实现对不同的队列进行限制速度，用ratelimiter实现.   
+
+比如,有两个队列，A,B,A限速10,B限速5.总共15.   
+当A队列放入速度超过每秒10个时，则按照速度10/S.   
+如果没有超过10,则按照实际速度。    
+如果B队列放入速度超过5,且 A队列放入速度没有超过10,则A队列会处理B队列数据   
+
+
+所有队列遵循以上规则
 
 
 
@@ -54,13 +62,13 @@ limit-config:
      
      放入队列     
      
-     limitService.addData("t1",testData);   
+     limitService.addData("t1",testData);   (阻塞放入，如果队列满，则阻塞)
 
 4.
 
 
       获取对象   
-      BaseData data = limitService.getData("t1");
+      BaseData data = limitService.getData("t1")（如果取不到值，阻塞）;
     
     
  
