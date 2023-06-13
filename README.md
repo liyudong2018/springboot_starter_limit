@@ -31,20 +31,33 @@ limit-config:
     <version>0.0.1-SNAPSHOT</version>  
      
   </dependency>  
- 使用方式:  
-  1.要放入对象实现BaseData，空接口    
-  
-  2.
+ 使用方式:    
  
-     @Autowired    
-     
-     
-    private LimitService limitService;    
-  3. 放入队列    
+ 1.  
+    要放入对象实现BaseData，空接口    
   
-   limitService.addData("t1",testData);   
-   4.获取对象   
-     BaseData data = limitService.getData("t1");
+ 2.
+ 
+          @Autowired    
+
+
+         private LimitService limitService;    
+
+
+
+
+3.
+
+     
+     放入队列     
+     
+     limitService.addData("t1",testData);   
+
+4.
+
+
+      获取对象   
+      BaseData data = limitService.getData("t1");
     
     
  
